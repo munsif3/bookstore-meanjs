@@ -5,11 +5,11 @@
     .module('authors')
     .run(menuConfig);
 
-  menuConfig.$inject = ['menuService'];
+  menuConfig.$inject = ['Menus'];
 
-  function menuConfig(menuService) {
+  function menuConfig(Menus) {
     // Set top bar menu items
-    menuService.addMenuItem('topbar', {
+    Menus.addMenuItem('topbar', {
       title: 'Authors',
       state: 'authors',
       type: 'dropdown',
@@ -17,13 +17,13 @@
     });
 
     // Add the dropdown list item
-    menuService.addSubMenuItem('topbar', 'authors', {
+    Menus.addSubMenuItem('topbar', 'authors', {
       title: 'List Authors',
       state: 'authors.list'
     });
 
     // Add the dropdown create item
-    menuService.addSubMenuItem('topbar', 'authors', {
+    Menus.addSubMenuItem('topbar', 'authors', {
       title: 'Create Author',
       state: 'authors.create',
       roles: ['user']
