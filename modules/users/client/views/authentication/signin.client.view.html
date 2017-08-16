@@ -1,6 +1,6 @@
 <div ng-controller="AuthenticationController">
   <div class="col-xs-offset-2 col-xs-8 col-md-offset-4 col-md-4 login-form-bg">
-    <h3 class="text-center">Login</h3>
+    <h3 class="text-center">Sign In</h3>
     <form name="userForm" ng-submit="signin(userForm.$valid)" class="signin form-horizontal" novalidate autocomplete="off">
       <fieldset>
         <div class="form-group">
@@ -8,13 +8,14 @@
             <span ng-bind="error"></span>
           </alert>
         </div>
-        
+
         <div class="form-group">
-          <div class="input-group input-group-lg" show-errors>
+          <div class="input-group " show-errors>
             <span class="input-group-addon">
               <i class="text-muted glyphicon glyphicon-user"></i>
             </span>
-            <input type="text" id="username" name="username" class="form-control" ng-model="credentials.username" placeholder="username" lowercase required>
+            <input type="text" id="username" name="username" class="form-control" ng-model="credentials.username" placeholder="username"
+              lowercase required>
             <div ng-messages="userForm.username.$error" role="alert">
               <p class="help-block error-text" ng-message="required"></p>
               <!-- Username is required. -->
@@ -23,11 +24,12 @@
         </div>
 
         <div class="form-group">
-          <div class="input-group input-group-lg" show-errors>
+          <div class="input-group " show-errors>
             <span class="input-group-addon">
                 <i class="text-muted glyphicon glyphicon-asterisk"></i>
-              </span> 
-            <input type="password" id="password" name="password" class="form-control" ng-model="credentials.password" placeholder="password" required>
+              </span>
+            <input type="password" id="password" name="password" class="form-control" ng-model="credentials.password" placeholder="password"
+              required>
             <div ng-messages="userForm.password.$error" role="alert">
               <p class="help-block error-text" ng-message="required"></p>
               <!-- Password is required. -->
@@ -36,7 +38,7 @@
         </div>
         </br>
         <div class="text-center form-group">
-          <button type="submit" class="btn btn-success btn-block btn-lg">Login</button>
+          <button type="submit" class="btn btn-success btn-block">Login</button>
         </div>
 
         <div class="text-center forgot-password">
