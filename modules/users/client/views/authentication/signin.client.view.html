@@ -16,7 +16,8 @@
             </span>
             <input type="text" id="username" name="username" class="form-control" ng-model="credentials.username" placeholder="username" lowercase required>
             <div ng-messages="userForm.username.$error" role="alert">
-              <p class="help-block error-text" ng-message="required">Username is required.</p>
+              <p class="help-block error-text" ng-message="required"></p>
+              <!-- Username is required. -->
             </div>
           </div>
         </div>
@@ -28,7 +29,8 @@
               </span> 
             <input type="password" id="password" name="password" class="form-control" ng-model="credentials.password" placeholder="password" required>
             <div ng-messages="userForm.password.$error" role="alert">
-              <p class="help-block error-text" ng-message="required">Password is required.</p>
+              <p class="help-block error-text" ng-message="required"></p>
+              <!-- Password is required. -->
             </div>
           </div>
         </div>
